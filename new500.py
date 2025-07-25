@@ -17,7 +17,7 @@ for ticker in tickers:
         info = stock.info
         market_cap = info.get('marketCap')
         if market_cap:
-            data.append((ticker, names.get(ticker), sectors.get(ticker), market_cap))
+            data.append((ticker, names.get(ticker), sectors.get(ticker), market_cap/100000000))
     except Exception:
         continue
 
